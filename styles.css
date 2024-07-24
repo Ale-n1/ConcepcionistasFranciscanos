@@ -2,6 +2,7 @@
 :root {
     --primary-color: #2C3E50;
     --secondary-color: #ECF0F1;
+    --tercery-color:rgba(151, 152, 204, 0.807);
     --background-color: #FFFFFF;
     --accent-color: #5DADE2; /* Azul claro */
     --header-background: #5DADE2; /* Azul claro */
@@ -178,11 +179,13 @@ header nav ul li a:hover {
 }
 
 .main .post {
+    text-align: justify;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .main .post h1 {
+    text-align: center;
     color: var(--accent-color);
     font-size: 28px;
     transition: color var(--transition-duration);
@@ -240,6 +243,7 @@ button.next-section:hover {
 }
 
 .main .more-content {
+    text-align: justify;
     display: none;
     transition: max-height var(--transition-duration);
 }
@@ -260,7 +264,7 @@ button.next-section:hover {
 
 .photo-item img {
     width: auto;
-    max-width: 80%; /* Reduce el tamaño de las imágenes */
+    max-width: 65%; /* Reduce el tamaño de las imágenes */
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform var(--transition-duration), box-shadow var(--transition-duration);
@@ -367,61 +371,32 @@ footer {
     background-color: var(--button-neon);
 }
 
-/* Estilos para el formulario de contacto */
-form {
-    display: flex;
-    flex-direction: column;
-    background: var(--secondary-color);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-}
 
-form label {
-    margin-bottom: 10px;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-form input, form textarea {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-form input:focus, form textarea:focus {
-    outline: none;
-    border-color: var(--accent-color);
-}
-
-form button {
-    background: var(--button-background);
-    border: none;
+button.read-more {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--button-background);
     color: var(--button-text);
-    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color var(--transition-duration), color var(--transition-duration);
+    transition: background-color 0.3s;
 }
 
-form button:hover {
-    background-color: var(--secondary-color);
-    color: var(--button-background);
-    text-shadow: 0 0 10px var(--button-neon), 0 0 20px var(--button-neon), 0 0 30px var(--button-neon);
+button.read-more:hover {
+    background-color: var(--button-neon);
 }
-
 /* Estilos específicos para la sección de Más Información */
 #MasInformacion {
-    padding: 20px;
+    padding: 80px;
     background: var(--secondary-color);
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-top: 40px;
     transition: background-color var(--transition-duration), color var(--transition-duration);
 }
+
 
 #MasInformacion article {
     margin-bottom: 20px;
@@ -432,10 +407,12 @@ form button:hover {
 }
 
 #MasInformacion article h2 {
-    margin-top: 0;
+    padding: 10px;
+    margin: 20px;
+    margin-top: 10;
     color: var(--primary-color);
     font-size: 24px;
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 5px solid var(--accent-color);
     padding-bottom: 10px;
     transition: color var(--transition-duration);
 }
@@ -446,19 +423,21 @@ form button:hover {
 }
 
 #MasInformacion article p {
+    padding: 2%;
     color: var(--primary-color);
     line-height: 1.8;
     margin: 15px 0;
 }
 
 #MasInformacion article ul {
+    
     list-style-type: disc;
     padding-left: 20px;
-    margin: 15px 0;
+    margin: 30px 15;
 }
 
 #MasInformacion article ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: var(--primary-color);
 }
 
@@ -487,4 +466,59 @@ form button:hover {
     background-color: var(--secondary-color);
     color: var(--button-background);
     text-shadow: 0 0 10px var(--button-neon), 0 0 20px var(--button-neon), 0 0 30px var(--button-neon);
+}
+
+
+/*Cajas de descripción */
+.cajac{
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    padding: 35px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 10px;
+    max-width: 95%;
+    text-align: justify;
+    opacity: 20;
+    transition: opacity var(--transition-duration);
+    
+}
+
+
+.social-bar {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.social-icon {
+    color: var(--tercery-color);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--link-hover-color);
+}
+
+@media (max-width: 768px) {
+    form#registro-form {
+        max-width: 100%;
+    }
+}
+
+
+
+/*Configuraciones especiales */
+section.main {
+    padding: 3rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.imagen {
+    text-align: center;
+    margin-bottom: 3rem;
 }

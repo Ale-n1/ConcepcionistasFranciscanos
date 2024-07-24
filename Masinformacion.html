@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concepcionistas Franciscanos</title>
+    <title>Concepcionistas Franciscanos - Más Información</title>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -13,7 +13,7 @@
     <div class="contenedor">
         <header>
             <nav>
-                <ul>                    
+                <ul>
                     <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
                     <li><a href="SobreNosotros.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
                     <li><a href="Nuestramision.html"><i class="fas fa-cross"></i> Nuestra misión</a></li>
@@ -27,7 +27,7 @@
 
         <section class="main">
             <div class="imagen">
-                <img src="images/LOGO.png" alt="logo" width="400px">
+                <img src="images/CF.png" alt="logo" width="300px">
             </div>
             
             <h2>Más Información</h2>
@@ -44,12 +44,15 @@
                         <li><strong>Maestre en general:</strong> Fray Emilio Alonso María Antonio</li>
                         <li><strong>Teléfonos:</strong>
                             <ul>
-                                <li>Fray Emilio: <a href="tel:+529711208576">+52 971 120 8576</a></li>
-                                <li>Hermano Santiago: <a href="tel:+524251470957">+52 425 147 0957</a></li>
+                                <li>Fray Emilio: <a href="tel:+1123456789"><button><i class="fas fa-phone"></i> Llamar</button></a></li>
+                                <li>Hermano Santiago: <a href="tel:+1987654321"><button><i class="fas fa-phone"></i> Llamar</button></a></li>
                             </ul>
                         </li>
-                        <li><strong>Correo:</strong> <a href="mailto:ConcepcionistasFranciscanos01@gmail.com">ConcepcionistasFranciscanos01@gmail.com</a></li>
+                        <li><strong>Correo:</strong> <a href="mailto:concepcionistasfranciscanos01@gmail.com"><button><i class="fas fa-envelope"></i> Enviar correo</button></a></li>
                     </ul>
+
+                    <p>Únete a nuestra comunidad completando el siguiente formulario de registro:</p>
+                    <button onclick="window.location.href='Registro.html'" class="registrate-btn"><i class="fas fa-user-plus"></i> Regístrate</button>
                 </article>
             
                 <article>
@@ -62,8 +65,11 @@
                 <article>
                     <h2>Ubicación</h2>
                     <p>
-                        Visita nuestra nuestras instalaciones puedes encontrar el convento en Juchitán de Zaragoza Oaxaca en la siguiente ubicación:
+                        Visita nuestras instalaciones, puedes encontrar el convento en Juchitán de Zaragoza, Oaxaca en la siguiente ubicación:
                     </p>
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d980.2510379624125!2d-95.02979373042379!3d16.45820928517292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDI3JzI5LjYiTiA5NcKwMDEnNDQuOSJX!5e1!3m2!1ses!2smx!4v1721825535183!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                     <p>
                         <a href="https://maps.app.goo.gl/EVdn4UXXPU9bGD868" target="_blank">Ver en Google Maps</a>
                     </p>
@@ -76,44 +82,15 @@
                     </p>
                     <button class="next-section">Donar Ahora</button>
                 </article>
-                
-                <article>
-                    <h2>Registro</h2>
-                    <p>Únete a nuestra comunidad completando el siguiente formulario de registro:</p>
-                    <form id="registro-form">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="telefono">Teléfono:</label>
-                        <input type="tel" id="telefono" name="telefono" required>
-
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-                        <button type="submit" class="read-more">Registrarse</button>
-                    </form>
-                </article>
-                
-            </section>
             
+            </section>
         </section>
 
-        <aside>
-            <div class="widget">
-                <h3 class="titulo">Artículos Destacados</h3>
-                <!-- Aquí pueden ir algunos artículos destacados -->
-            </div>
-        </aside>
-
         <footer>
-            <p>&copy; 2024 Concepcionistas Franciscanos. Todos los derechos reservados.</p>
+            <p>2023 Concepcionistas Franciscanos. Todos los derechos reservados.</p>
         </footer>
-
     </div>
+
     <script src="script.js"></script>
-    
 </body>
 </html>

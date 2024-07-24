@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="Registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="form-card1">
+        <div class="form-card2">
+            <form id="form" class="form" >
+                <p class="form-heading">Registro</p>
+
+                <div class="form-field">
+                    <input required placeholder="Nombre" class="input-field" type="text" id="name" name="name"/>
+                </div>
+
+                <div class="form-field">
+                    <input required placeholder="Correo Electrónico" class="input-field" type="email" id="email" name="email"/>
+                </div>
+
+                <div class="form-field">
+                    <input required placeholder="Teléfono" class="input-field" type="tel" id="telefono" name="telefono"/>
+                </div>
+
+                <div class="form-field">
+                    <select required id="pais" name="pais" class="input-field">
+                        <option value="argentina">Argentina</option>
+                        <option value="bolivia">Bolivia</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="canada">Canadá</option>
+                        <option value="chile">Chile</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="costarica">Costa Rica</option>
+                        <option value="cuba">Cuba</option>
+                        <option value="dominicana">República Dominicana</option>
+                        <option value="ecuador">Ecuador</option>
+                        <option value="elsalvador">El Salvador</option>
+                        <option value="guatemala">Guatemala</option>
+                        <option value="honduras">Honduras</option>
+                        <option value="mexico">México</option>
+                        <option value="nicaragua">Nicaragua</option>
+                        <option value="panama">Panamá</option>
+                        <option value="paraguay">Paraguay</option>
+                        <option value="peru">Perú</option>
+                        <option value="usa">Estados Unidos</option>
+                        <option value="uruguay">Uruguay</option>
+                        <option value="venezuela">Venezuela</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <input required placeholder="Estado" class="input-field" type="text" id="estado" name="estado"/>
+                </div>
+
+                <div class="form-field">
+                    <label>Sexo:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="sexo_masculino" name="sexo" value="masculino" required/>
+                        <label for="sexo_masculino">Masculino</label>
+                        <input type="radio" id="sexo_femenino" name="sexo" value="femenino" required/>
+                        <label for="sexo_femenino">Femenino</label>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <textarea required placeholder="Mensaje" cols="30" rows="3" class="input-field" id="mensaje" name="mensaje"></textarea>
+                </div>
+
+                <div class="form-field checkbox-group">
+                    <input type="checkbox" id="terminos" name="terminos" required/>
+                    <label for="terminos">Acepto los términos y condiciones</label>
+                </div>
+
+                <div class="form-field recaptcha">
+                    <input type="checkbox" id="recaptcha" name="recaptcha" required/>
+                    <label for="recaptcha">No soy un robot</label>
+                </div>
+
+                <input type="submit" id="button" value="Enviar Mensaje"class="sendMessage-btn" >
+            </form>
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+ 
+            <script type="text/javascript"> emailjs.init('oPjSOTP4cT4lVJmpL') </script>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
+    
+</body>
+<script>
+    
+    const btn = document.getElementById('button');
+    document.getElementById('form').addEventListener('submit', function(event) { event.preventDefault();
+
+   btn.value = 'Enviando...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_sc459ek';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Enviar Mensaje';
+      alert('Formulario enviado correctamente!');
+      window.location.href = 'index.html';
+    }, (err) => {
+      btn.value = 'Enviar Mensaje';
+      alert(JSON.stringify(err));
+    });
+});
+</script>
+</html>
